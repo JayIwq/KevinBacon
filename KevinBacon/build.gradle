@@ -1,0 +1,32 @@
+plugins {
+    id 'java'
+}
+
+jar {
+    manifest {
+        attributes(
+                'Main-Class': 'KevinBacon'
+        )
+    }
+    from {
+        configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}
+
+apply plugin: 'idea'
+
+group 'KevinBacon'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 11
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    //testCompile group: 'junit', name: 'junit', version: '4.12'
+    //TODO: tests
+    compile 'org.jsoup:jsoup:1.10.1'
+    compile group: 'org.json', name: 'json', version: '20180130'
+}
