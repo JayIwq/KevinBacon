@@ -9,4 +9,4 @@ java -jar ./build/libs/KevinBacon-1.0-SNAPSHOT.jar
 example input parameters
 java -jar ./build/libs/KevinBacon-1.0-SNAPSHOT.jar 'Footloose (1984 filim)' 'Kevin Bacon'
 
-//TODO: Preprocess webscrape and build pipeline content into graph database like neo4j
+//TODO: Cycle detection, Preprocess webscrape and build pipeline content into graph database like neo4j
